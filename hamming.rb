@@ -1,8 +1,18 @@
 class HammingCalculator
+  def get_input
+    puts "Enter first string:"
+    input1 = gets.strip
+    puts "Enter second string:"
+    input2 = gets.strip
+
+    difference = calculate input1, input2
+    puts "The hamming difference between the two strings is #{difference}"
+  end
+
   def calculate string1, string2
 
     order_strings(string1, string2)
-    
+
     count = 0
 
     @longString.each_char.with_index do |char, index|
@@ -26,3 +36,7 @@ class HammingCalculator
     end
   end
 end
+
+#  Code to run class as a script from command lin
+# hc = HammingCalculator.new()
+# hc.get_input
